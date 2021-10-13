@@ -1,0 +1,105 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="row">
+<div class="col-sm-8 offset-2">
+<h4 class="alert alert-info">UPDATE BOOK DETAILS</h4>
+<form method="POST" class="post-form" action="">  
+        {% csrf_token %} 
+        {{form.as_p}}
+        <input type="submit" class="btn btn-success" value="update">
+        <a href="{% url 'booklist' %}" class="btn btn-info">Back to Home</a>
+        </form>
+        </div>
+        </div>
+        {% endblock content %}
+
+
+
+{% comment %} <!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Update</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>  
+</head>  
+<body>  
+ 
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">BookId:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="bookid" id="id_bookid" required maxlength="20" value="{{ data.bookid }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">BTYPE:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="btype" id="id_btype" required maxlength="100" value="{{ data.btype }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Category:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="category" id="id_category" required maxlength="254" value="{{ data.category }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">BOOK_NAME:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="bookname" id="id_bookname" required maxlength="15" value="{{ data.bookname }}" />  
+    </div>  
+  </div>
+
+   <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">DESCRIPTION:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="description" id="id_description" required maxlength="15" value="{{ data.description }}" />  
+    </div>  
+  </div>  
+
+   <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">PUB_DATE:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="pub_date" id="id_pub_date" required maxlength="15" value="{{ data.pub_date }}" />  
+    </div>  
+  </div>  
+
+   <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">PRICE:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="price" id="id_price" required maxlength="15" value="{{ data.price }}" />  
+    </div>  
+  </div> 
+
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">IMAGE:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="cover_image" id="id_cover_image" required maxlength="15" value="{{ data.cover_image }}" />  
+    </div>  
+  </div>       
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>   {% endcomment %}
+
+
+
+
+
+
+
+

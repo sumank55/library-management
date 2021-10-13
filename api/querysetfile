@@ -1,0 +1,4 @@
+1.> topexpensive=Book1.objects.order_by('-price')[:5]
+2.> Book1.objects.filter(pub_date__gte=datetime.date(2015,01,01)
+3.> countbook=Book1.objects.values('booktype').annotate(dcount=Count('booktype')).orde_by())
+                      
